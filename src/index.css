@@ -1,0 +1,365 @@
+:root {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+
+  --bleeding: 0.5cm;
+  --margin: 1cm;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: rgb(204, 204, 204);
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  display: inline-block;
+  position: relative;
+  height: 297mm;
+  width: 210mm;
+  margin: 2em auto;
+  padding: calc(var(--bleeding) + var(--margin));
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  background: white;
+}
+
+@media screen {
+  .page::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--bleeding) * 2);
+    height: calc(100% - var(--bleeding) * 2);
+    margin: var(--bleeding);
+    outline: thin dashed black;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+@media print {
+  .page {
+    margin: 0;
+    overflow: hidden;
+  }
+  aside {
+    visibility: hidden;
+  }
+}
+
+.page a {
+  color: black;
+  text-decoration: none;
+}
+
+aside {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0em;
+  right: 0em;
+}
+
+aside svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: rgb(134, 38, 60);
+  margin: 0.5em;
+}
+
+section {
+  margin-bottom: 1.5em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.contact > .contactName {
+  font-weight: 700;
+  font-size: 22pt;
+  letter-spacing: inherit;
+  font-family: inherit;
+  line-height: 34px;
+  color: rgb(134, 38, 60);
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.contact > .contactIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  max-width: 80%;
+}
+
+.contact > .contactIcons > .contactIconWrapper {
+  white-space: nowrap;
+  margin: 0.5em;
+}
+
+.contact > .contactIcons > .contactIconWrapper > .contactIconWrapperIcon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: rgb(0, 0, 0);
+  width: 1em;
+  height: 1em;
+  padding-bottom: 0.05em;
+  margin-right: 0.3em;
+}
+
+.sectionHeading {
+  width: "100%
+}
+
+.sectionHeading > div {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: inherit;
+  letter-spacing: 0.5px;
+  font-size: 11.5pt;
+  line-height: 21px;
+  color: rgb(134, 38, 60);
+}
+
+.sectionHeading > div > div {
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border-bottom: 2px solid rgb(134, 38, 60);
+  margin-bottom: 0.756em;
+}
+
+.sectionHeading > div > div > div {
+  margin-left: 0px;
+  margin-bottom: 0.15em;
+}
+
+.heading {
+  width: 100%;
+}
+
+.heading > div {
+  width: 100%;
+  word-break: break-word;
+}
+
+.heading > div > div {
+  width: 100%;
+  display: flex;
+  line-height: 19px;
+  flex-direction: column;
+}
+
+.heading > div > div > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6em;
+}
+
+.heading .main {
+  width: 100%;
+}
+
+.heading .main > a {
+  display: inline-block;
+  width: 100%;
+  font-size: 10.5pt;
+  line-height: 19px;
+  padding-bottom: 0px;
+}
+
+.heading.inline .main > a {
+  display: inline-flex;
+}
+
+.heading .headingTitle {
+  font-weight: bold;
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.heading .main > a > .headingSubtitle {
+  font-weight: normal;
+  font-style: italic;
+  display: block;
+}
+
+.heading .main > a > .headingSubtitle > .headingSubtitle {
+  white-space: pre-wrap;
+  display: inline-block;
+}
+
+span.extLink {
+  vertical-align: baseline;
+  padding-left: 0.3em;
+  padding-right: 0.2em;
+}
+
+span.extLink  > svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: rgb(0, 0, 0);
+  width: 0.6em;
+  height: 0.6em;
+  margin-bottom: 0.05em;
+}
+
+.heading .aside {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.heading .aside > span {
+  display: flex;
+  flex-flow: wrap;
+  padding-left: 1em;
+  min-width: 280px;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  line-height: 19px;
+}
+
+.indentedContent {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.indentedContent > p:first-child {
+  margin-top: -0.5em;
+}
+
+.indentedContent.project > p:first-child {
+  margin-bottom: -0.5em;
+}
+
+.indentedContent > ul {
+  padding-left: 1.3em;
+}
+
+.resultsTableWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.resultsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultsTable td:nth-of-type(-3n + 5), .resultsTable th:nth-of-type(-3n + 5) {
+  text-align: center;
+}
+
+.resultsTable th:nth-of-type(-3n + 4) {
+  background-color: rgb(134, 38, 60);
+  color: white;
+  text-align: left;
+  font-weight: normal;
+  width: 20em;
+}
+
+.resultsTable th:nth-of-type(-3n + 4), .resultsTable td:nth-of-type(-3n + 4) {
+  padding-left: 10px;
+}
+
+.resultsTable th:not(:nth-of-type(3)), .resultsTable td:not(:nth-of-type(3)) {
+  border: 1px solid rgb(134, 38, 60);
+}
+
+.resultsTable th:nth-of-type(-3n + 5) {
+  background-color: rgb(134, 38, 60);
+  color: white;
+  font-weight: normal;
+  width: 3em;
+}
+
+.resultsTable th:nth-of-type(3) {
+  width: 2em;
+}
+
+.resultsTable tr:nth-of-type(8) {
+  height: 1em;
+}
+
+.resultsTable th, .resultsTable td {
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
+}
+
+.resultsTable tr:nth-of-type(2n + 1) > td:not(:nth-of-type(3)) {
+  background-color: #F5DFE2;
+}
+
+div.skills, .skills > table {
+  width: 100%;
+}
+
+.skills > table > tr > th {
+  text-align: left;
+  padding-right: 0.5em;
+  padding-left: 0;
+  padding-bottom: 0.3em;
+}
+
+.certs > table, .interests > table, .references > table {
+  width: 100%;
+  text-align: left;
+}
+
+.certs > table tr:nth-of-type(2) > td {
+  width: 50%;
+}
+
+.interests > table th, .interests > table td, .references > table th, .references > table td {
+  vertical-align: top;
+}
+
+.interests > table tr:nth-of-type(2) > td {
+  width: 50%;
+  padding-bottom: 1em;
+}
+
+.interests > table tr td {
+  padding-right: 1em;
+}
+
+.references > table tr td:first-of-type {
+  width: 36%;
+}
+
+.references > table tr td:last-of-type {
+  width: 26%;
+}
+
+.references > table tr:nth-of-type(3) td {
+  padding-bottom: 1.5em;
+}
+
