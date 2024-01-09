@@ -91,7 +91,33 @@ function App() {
           </section>
 
           <section>
+            {/* TODO: Update these */}
             <SectionHeading>Projects</SectionHeading>
+
+            <Heading
+              href="https://github.com/piotrpdev/Arduino-Discord-Controller"
+              aside="Jan 2023"
+            >
+              <HeadingTitle>
+                Arduino Discord Controller
+                <ExtLink />
+              </HeadingTitle>
+            </Heading>
+            <div className="indentedContent project">
+              <p>
+                Controlling <ExtLinkText text="Discord" href="https://discord.com/safety/360044149331-what-is-discord" /> (VoIP desktop app) using a combination of <ExtLinkText text="Arduino" href="https://learn.sparkfun.com/tutorials/what-is-an-arduino/all" />, <ExtLinkText text="BetterDiscord" href="https://betterdiscord.app/" />, and Python.
+              </p>
+              <ul>
+                <li>
+                  Created a touchscreen user interface and simple messaging protocol on the Arduino using C++.
+                </li>
+                <li>Made a Python WebSocket server to facilitate communication between the Arduino and Discord.</li>
+                <li>
+                  Reverse-engineered Discord to capture UI events and send them to the Python Server using JavaScript.
+                </li>
+              </ul>
+            </div>
+
             <Heading
               href="https://github.com/piotrpdev/WIT-Timetable-Generator"
               aside="Apr 2022"
@@ -131,7 +157,8 @@ function App() {
                 </li>
               </ul>
             </div>
-            <Heading
+
+            {/* <Heading
               href="https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker"
               aside="Feb 2020"
             >
@@ -157,7 +184,8 @@ function App() {
                   large codebase changes.
                 </li>
               </ul>
-            </div>
+            </div> */}
+            
             <Heading
               href="https://cao-calculator.vercel.app/"
               aside="Dec 2020 &#8211; Feb 2021"
@@ -192,6 +220,7 @@ function App() {
       ) : (
         <>
           <section>
+            {/* TODO: Update these */}
             <SectionHeading>Skills</SectionHeading>
             <div className="skills">
               <table>
@@ -228,6 +257,7 @@ function App() {
           </section>
 
           <section>
+            {/* TODO: Add the OpenShift and Kafka course, maybe the Golang course? */}
             <SectionHeading>Courses</SectionHeading>
             <Heading
               className="heading inline"
@@ -250,6 +280,7 @@ function App() {
           </section>
 
           <section>
+            {/* TODO: Update this and add Red Hat, maybe remove kelly's for space? Description length? Add logo */}
             <SectionHeading>Professional Experience</SectionHeading>
             <Heading
               className="heading inline"
@@ -272,6 +303,7 @@ function App() {
           </section>
 
           <section>
+            {/* TODO: Remove this for space? */}
             <SectionHeading>Volunteering Experience</SectionHeading>
             <Heading
               className="heading inline"
@@ -294,6 +326,7 @@ helping with the cleaning of my town and landscaping.
           </section>
 
           <section>
+            {/* TODO: Condense/Remove two for space? */}
             <SectionHeading>Interests</SectionHeading>
             <div className="interests">
               <table>
