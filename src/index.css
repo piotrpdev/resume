@@ -239,7 +239,7 @@ span.extLink  > svg {
   display: flex;
   flex-flow: wrap;
   padding-left: 1em;
-  min-width: 280px;
+  min-width: max-content;
   -webkit-box-pack: end;
   justify-content: flex-end;
   line-height: 19px;
