@@ -35,7 +35,7 @@ function App() {
           <FaRotate />
         </button>
       </aside>
-      {flipPage ? (
+      {!flipPage ? (
         <>
           <section>
             <div className="contact">
