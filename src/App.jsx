@@ -53,9 +53,9 @@ function App() {
                   text={import.meta.env.VITE_PHONE_NUMBER || <b>REDACTED</b>}
                 />
                 <ContactIconWrapper
-                  href="mailto:piotrpdev@gmail.com"
+                  href="https://en.wikipedia.org/wiki/Waterford"
                   icon={<FaMapMarkerAlt />}
-                  text="Waterford City, Co. Waterford"
+                  text="Waterford City, Ireland"
                 />
                 <ContactIconWrapper
                   href="https://piotrp.dev/"
