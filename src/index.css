@@ -363,3 +363,10 @@ div.skills, .skills > table {
   padding-bottom: 1.5em;
 }
 
+#barcode {
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14px;
+}

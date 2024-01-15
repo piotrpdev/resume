@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SectionHeading from "./components/SectionHeading";
 import Heading from "./components/Heading";
 import HeadingTitle from "./components/HeadingTitle";
@@ -20,9 +20,23 @@ import {
 } from "react-icons/fa";
 import ContactIconWrapper from "./components/ContactIconWrapper";
 import Results from "./components/Results";
+import bwipjs from 'bwip-js';
 
 function App() {
   const [flipPage, setFlipPage] = React.useState(false);
+  const [barcodeSVG, setBarcodeSVG] = React.useState("");
+
+  useEffect(() => {
+    const barc = bwipjs.toSVG({
+      bcid:        'rectangularmicroqrcode',       // Barcode type
+      text:        '240115REDSEI',    // Text to encode
+      version:     'R7x59',               // QR Code version 1-40
+      includetext: false,            // Show human-readable text
+      textxalign:  'center',        // Always good to set this,
+      paddingtop:  5,
+    })
+    setBarcodeSVG(barc)
+  }, []);
 
   return (
     <>
@@ -523,6 +537,7 @@ helping with the cleaning of my town and landscaping.
           </section>
         </>
       )}
+      <div id="barcode" dangerouslySetInnerHTML={{__html: barcodeSVG}}></div>
     </>
   );
 }
