@@ -47,7 +47,7 @@ function App() {
                   text="piotrpdev@gmail.com"
                 />
                 <ContactIconWrapper
-                  href="tel:***REMOVED***"
+                  href={import.meta.env.VITE_PHONE_NUMBER ? `tel:${import.meta.env.VITE_PHONE_NUMBER}` : null}
                   icon={<FaPhoneAlt />}
                   // @ts-ignore
                   text={import.meta.env.VITE_PHONE_NUMBER || <b>REDACTED</b>}
