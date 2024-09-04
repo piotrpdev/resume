@@ -43,7 +43,7 @@ body {
   break-after: page;
 }
 
-@media screen {
+/* @media screen {
   .page::after {
     position: absolute;
     content: '';
@@ -56,7 +56,7 @@ body {
     pointer-events: none;
     z-index: 9999;
   }
-}
+} */
 
 @media print {
   .page {
