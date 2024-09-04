@@ -207,7 +207,7 @@ function App() {
             </div> */}
 
           <Heading
-            href="https://cao-calculator.vercel.app/"
+            href="https://github.com/piotrpdev/cao-calculator"
             aside="Dec 2020 &#8211; Feb 2021"
           >
             <HeadingTitle>
