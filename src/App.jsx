@@ -295,26 +295,6 @@ function App() {
 
           <Heading
             className="heading inline"
-            href="https://www.redhat.com/en/services/training/ad482-developing-event-driven-applications-apache-kafka-and-red-hat-amq-streams"
-            aside="July 2023"
-          >
-            <HeadingTitle>
-              Event-Driven Applications with Apache Kafka (AD482),{" "}
-            </HeadingTitle>
-            <HeadingSubtitle>
-              Red Hat Training and Certification
-            </HeadingSubtitle>
-          </Heading>
-
-          <div className="indentedContent">
-            <p>
-              Learned to work with Apache Kafka and Red Hat AMQ Streams to
-              create event-driven applications.
-            </p>
-          </div>
-
-          <Heading
-            className="heading inline"
             href="https://www.redhat.com/en/services/training/red-hat-openshift-administration-i-operating-a-production-cluster"
             aside="Jun 2023"
           >
@@ -355,6 +335,51 @@ function App() {
 
         <section>
           <SectionHeading>Professional Experience</SectionHeading>
+
+          <Heading
+            className="heading inline"
+            href="https://summerofcode.withgoogle.com/programs/2024/projects/wenKR2i3"
+            aside="May 2024 &#8211; Aug 2024"
+          >
+            <HeadingTitle>Google Summer of Code Contributor, </HeadingTitle>
+            <HeadingSubtitle>
+              Electron, Remote
+            </HeadingSubtitle>
+          </Heading>
+
+          <div className="indentedContent">
+            <p>
+            The Electron documentation previously didn&apos;t feature API history for its functions, classes, etc.
+            I implemented the missing API history in a similar fashion to the{" "}
+            <ExtLinkText
+                text="Node.js"
+                href="https://nodejs.org/en"
+              />
+            documentation:
+            by allowing the use of a simple but powerful YAML schema in the API documentation Markdown files
+            and displaying it nicely on the{" "}
+            <ExtLinkText
+                text="Electron documentation website"
+                href="https://www.electronjs.org/docs/latest/api/browser-view"
+              />
+            . I made a{" "}
+            <ExtLinkText
+                text="proposal"
+                href="https://github.com/piotrpdev/gsoc/blob/main/2024-electron.md"
+              />
+              ,{" "}
+              <ExtLinkText
+                text="RFC"
+                href="https://github.com/electron/rfcs/blob/f36e0a8483e1ea844710890a8a7a1bd58ecbac05/text/0004-api-history-schema.md"
+              />
+              , and{" "}
+              <ExtLinkText
+                text="final work product document"
+                href="https://github.com/piotrpdev/gsoc/blob/main/2024-electron-product.md"
+              />
+              for this feature.
+            </p>
+          </div>
 
           <Heading
             className="heading inline"
@@ -406,24 +431,6 @@ function App() {
                 href="https://medium.com/piotr-p%C5%82aczeks-red-hat-internship-experience/new-journey-at-red-hat-c964da99b3c7"
               />{" "}
               in which I talk about my internship.
-            </p>
-          </div>
-
-          <Heading
-            className="heading inline"
-            href="https://www.kellys.ie/"
-            aside="Aug 2021 &#8211; Dec 2022"
-          >
-            <HeadingTitle>Kitchen Porter, </HeadingTitle>
-            <HeadingSubtitle>
-              Kelly&apos;s Resort Hotel, Rosslare
-            </HeadingSubtitle>
-          </Heading>
-
-          <div className="indentedContent">
-            <p>
-              Consistently performed well under pressure, worked efficiently
-              with a team, and arrived/left on time.
             </p>
           </div>
         </section>
@@ -495,22 +502,25 @@ helping with the cleaning of my town and landscaping.
               <tr>
                 <th>Brendan O&apos;Farrell</th>
                 <th>Mary Lyng</th>
-                <th>Niamh Lambert</th>
+                <th>David Sanders</th>
               </tr>
               <tr>
                 <td>Software Engineering Manager,</td>
                 <td>Lecturer in Web Dev. and Databases,</td>
-                <td>HR and Assistant Manager,</td>
+                <td>Senior Systems Engineer,</td>
               </tr>
               <tr>
                 <td>Red Hat</td>
                 <td>South East Technological University</td>
-                <td>Kelly&apos;s Resort Hotel & Spa</td>
+                <td>Electron</td>
               </tr>
               <tr>
                 <td>bofarrel@redhat.com</td>
                 <td>Mary.Lyng@setu.ie</td>
-                <td>NLambert@kellys.ie</td>
+                <td>
+                  {/* @ts-ignore */}
+                  {import.meta.env.VITE_DAVID_EMAIL || <b>REDACTED</b>}
+                </td>
               </tr>
               <tr>
                 <td>
@@ -518,7 +528,7 @@ helping with the cleaning of my town and landscaping.
                   {import.meta.env.VITE_BRENDAN_PHONE_NUMBER || <b>REDACTED</b>}
                 </td>
                 <td>+353 51 302 057</td>
-                <td>+353 53 913 2114</td>
+                <td />
               </tr>
             </table>
           </div>
