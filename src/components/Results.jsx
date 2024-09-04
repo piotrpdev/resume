@@ -5,60 +5,10 @@ export default function Results() {
   return (
     <div className="resultsTableWrapper">
       <table className="resultsTable">
-        <tr>
-          <th>Semester 1</th>
-          <th>%</th>
-          <th id="resultsTableXSpacer"></th>
-          <th>Semester 2</th>
-          <th>%</th>
-        </tr>
-        <tr>
-          <td>Mathematics Fundamentals</td>
-          <td>92</td>
-          <td></td>
-          <td>Computer Systems 2</td>
-          <td>90</td>
-        </tr>
-        <tr>
-          <td>Computer Systems 1</td>
-          <td>88</td>
-          <td></td>
-          <td>Programming Fundamentals 2</td>
-          <td>100</td>
-        </tr>
-        <tr>
-          <td>Programming Fundamentals 1</td>
-          <td>96</td>
-          <td></td>
-          <td>Business Information Systems & Processes</td>
-          <td>81</td>
-        </tr>
-        <tr>
-          <td>Communications Skills</td>
-          <td>83</td>
-          <td></td>
-          <td>Introduction to Software Engineering</td>
-          <td>70</td>
-        </tr>
-        <tr>
-          <td>Website Development 1</td>
-          <td>99</td>
-          <td></td>
-          <td>Systems Analysis</td>
-          <td>85</td>
-        </tr>
-        <tr>
-          <td>Systems Analysis Design & Testing</td>
-          <td>71</td>
-          <td></td>
-          <td>Website Development 2</td>
-          <td>100</td>
-        </tr>
-        <tr id="resultsTableYSpacer"></tr>
-        <tr>
+      <tr>
           <th>Semester 3</th>
           <th>%</th>
-          <th></th>
+          <th id="resultsTableXSpacer"></th>
           <th>Semester 4</th>
           <th>%</th>
         </tr>
@@ -103,6 +53,56 @@ export default function Results() {
           <td></td>
           <td>Integrated Marketing</td>
           <td>69</td>
+        </tr>
+        <tr id="resultsTableYSpacer"></tr>
+        <tr>
+          <th>Semester 5</th>
+          <th></th>
+          <th></th>
+          <th>Semester 6</th>
+          <th>%</th>
+        </tr>
+        <tr>
+          <td>Learning Portfolio - Flexible Semester</td>
+          <td>Pass</td>
+          <td></td>
+          <td>Automated Cloud Services</td>
+          <td>84</td>
+        </tr>
+        <tr>
+          <td>Industrial Placement 1</td>
+          <td>Pass</td>
+          <td></td>
+          <td>Digital Transformation of Info. Systems</td>
+          <td>68</td>
+        </tr>
+        <tr>
+          <td>Industrial Placement 2</td>
+          <td>Pass</td>
+          <td></td>
+          <td>Further Statistics</td>
+          <td>78</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Mobile App Development 1</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>NoSQL Databases</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Technology Entrepreneurship</td>
+          <td>74</td>
         </tr>
       </table>
     </div>
