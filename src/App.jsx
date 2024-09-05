@@ -95,6 +95,44 @@ function App() {
           <SectionHeading>Projects</SectionHeading>
 
           <Heading
+            href="https://github.com/piotrpdev/aero-weather"
+            aside="Aug 2024"
+          >
+            <HeadingTitle>
+              Aero Weather
+              <ExtLink />
+            </HeadingTitle>
+          </Heading>
+
+          <div className="indentedContent project">
+            <p>
+              Cross-platform weather app with a{" "}
+              <ExtLinkText text="Windows Aero" href="https://en.wikipedia.org/wiki/Windows_Aero" />
+              inspired design.
+            </p>
+            <ul>
+              <li>
+                Used{" "}
+                <ExtLinkText text="Tauri" href="https://tauri.app/" />
+                (Rust) for the back-end, TypeScript for the front-end and{" "}
+                <ExtLinkText text="React" href="https://react.dev/" />
+                for the user interface.
+              </li>
+              <li>
+                Interacted with the{" "}
+                <ExtLinkText text="Open-Meteo Forecast API" href="https://open-meteo.com/en/docs" />
+                and{" "}
+                <ExtLinkText text="Nominatim Reverse Geocoding API" href="https://nominatim.org/release-docs/latest/api/Overview/" />.
+              </li>
+              <li>
+                Used{" "}
+                <ExtLinkText text="GitHub Actions" href="https://github.com/features/actions" />
+                (CI/CD) to simultaneously build app for Web, Windows, macOS and Linux.
+              </li>
+            </ul>
+          </div>
+
+          <Heading
             href="https://github.com/piotrpdev/Arduino-Discord-Controller"
             aside="Jan 2023"
           >
@@ -138,7 +176,7 @@ function App() {
             </ul>
           </div>
 
-          <Heading
+          {/* <Heading
             href="https://github.com/piotrpdev/WIT-Timetable-Generator"
             aside="Apr 2022"
           >
@@ -176,7 +214,7 @@ function App() {
                 for Virtual Machines.
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* <Heading
               href="https://github.com/piotrpdev/WeBuy-Cex-Price-Tracker"
