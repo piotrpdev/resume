@@ -29,7 +29,7 @@ function App() {
       <div id="front-page" className="page">
         <section>
           <div className="contact">
-            <div className="contactName">Piotr Bogdan Placzek</div>
+            <div className="contactName">Piotr Bogdan Płaczek</div>
             <div className="contactIcons">
               <ContactIconWrapper
                 href="mailto:piotrpdev@gmail.com"
@@ -95,6 +95,123 @@ function App() {
           <SectionHeading>Projects</SectionHeading>
 
           <Heading
+            href="https://github.com/piotrpdev/webmon"
+            aside="Jun 2023"
+          >
+            <HeadingTitle>
+              Webmon
+              <ExtLink />
+            </HeadingTitle>
+          </Heading>
+
+          <div className="indentedContent project">
+            <p>
+              Website uptime tracker using{" "}
+              <ExtLinkText
+                text="Apache Kafka"
+                href="https://kafka.apache.org/"
+              />
+              and{" "}
+              <ExtLinkText
+                text="OpenShift"
+                href="https://www.redhat.com/en/technologies/cloud-computing/openshift"
+              />.
+            </p>
+            <ul>
+              <li>
+                Used Kotlin to monitor several websites simultaneously and publish uptime records to a Kafka cluster.
+              </li>
+              <li>
+                Used Kotlin (again) to consume those records live, in batches, and store them in a PostgreSQL database.
+              </li>
+              <li>
+                Included instructions and scripts for deploying to{" "}
+                <ExtLinkText
+                  text="Strimzi"
+                  href="https://strimzi.io/"
+                />
+                on OpenShift and visualizing using{" "}
+                <ExtLinkText
+                  text="Grafana"
+                  href="https://grafana.com/"
+                />
+                .
+              </li>
+            </ul>
+          </div>
+
+          <Heading
+            href="https://github.com/piotrpdev/virginhub-auto-firewall"
+            aside="Jan 2024"
+          >
+            <HeadingTitle>
+              VirginHub Auto Firewall
+              <ExtLink />
+            </HeadingTitle>
+          </Heading>
+
+          <div className="indentedContent project">
+            <p>
+              Script that automatically adds a rule to the router firewall to allow traffic when the global IPv6 address changes.
+            </p>
+            <ul>
+              <li>
+                Reverse-engineered the VirginHub Media Hub 6 router to find the necessary API endpoints.
+              </li>
+              <li>
+                Used Golang to interact with the router, add the necessary rule, and remove the rule for the old IPv6.
+              </li>
+              <li>
+                Added detailed logging to ensure the script runs smoothly. Included Dockerfile to build{" "}
+                <ExtLinkText
+                  text="Distroless"
+                  href="https://github.com/GoogleContainerTools/distroless"
+                />
+                image.
+              </li>
+            </ul>
+          </div>
+
+          <Heading
+            href="https://github.com/piotrpdev/rspi-bios"
+            aside="Aug 2024 &#8211; Sep 2024"
+          >
+            <HeadingTitle>
+              RSPI BIOS
+              <ExtLink />
+            </HeadingTitle>
+          </Heading>
+
+          <div className="indentedContent project">
+            <p>
+              Raspberry Pi system monitoring dashboard that mimics the style of old BIOS designs.
+            </p>
+            <ul>
+              <li>
+                Used Rust to create a HTTPS webserver that serves the dashboard, behind a CLI with extensive flags.
+              </li>
+              <li>
+                Used the{" "}
+                <ExtLinkText
+                  text="tokio"
+                  href="https://crates.io/crates/tokio"
+                />
+                crate to produce real-time{" "}
+                <ExtLinkText
+                  text="Server-Sent Events"
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events"
+                />
+                including uptime, process count, etc.
+              </li>
+              <li>
+                Used {" "}
+                <ExtLinkText text="GitHub Actions" href="https://github.com/features/actions" />
+                to cross-compile static Debian packages for the Raspberry Pi (ARMv7 and AArch64).
+              </li>
+            </ul>
+          </div>
+
+          {/* <Heading
             href="https://github.com/piotrpdev/aero-weather"
             aside="Aug 2024"
           >
@@ -130,9 +247,9 @@ function App() {
                 (CI/CD) to simultaneously build app for Web, Windows, macOS and Linux.
               </li>
             </ul>
-          </div>
+          </div> */}
 
-          <Heading
+          {/* <Heading
             href="https://github.com/piotrpdev/Arduino-Discord-Controller"
             aside="Jan 2023"
           >
@@ -174,7 +291,7 @@ function App() {
                 the Python Server using JavaScript.
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* <Heading
             href="https://github.com/piotrpdev/WIT-Timetable-Generator"
@@ -244,7 +361,7 @@ function App() {
               </ul>
             </div> */}
 
-          <Heading
+          {/* <Heading
             href="https://github.com/piotrpdev/cao-calculator"
             aside="Dec 2020 &#8211; Feb 2021"
           >
@@ -272,7 +389,7 @@ function App() {
                 timely manner.
               </li>
             </ul>
-          </div>
+          </div> */}
         </section>
       </div>
       <div id="back-page" className="page">
@@ -521,12 +638,12 @@ helping with the cleaning of my town and landscaping.
               </tr>
               <tr>
                 <td>
-                  I like playing milsims such as Arma 3 along with some casual
-                  games such as Rocket League and Pokemon.
+                  I mostly like playing milsims such as Squad and Arma,
+                  sometimes I play Dark Souls and Rocket League.
                 </td>
                 <td>
-                  I love all aspects of music: listening, composition, general
-                  theory, etc.
+                  I love making and listening to music. I play piano
+                  and a bit of guitar in my spare time.
                 </td>
               </tr>
             </table>
